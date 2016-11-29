@@ -11,12 +11,14 @@ public class Employee implements Serializable {
 	private String lastName1;
 	private String lastName2;
 	private GenericType employeeType;
+	private GenericType employeePosition;
 	private String drivingLicenceNumber;
 	private Date drivingLicenceDueDate;
 	private State drivingLicenceIssueState;
 	private Location defaultWorkLocation;
 	private Status status;
 	private Double dailyCost;
+	private GenericType company;
 	public Integer getId() {
 		return id;
 	}
@@ -59,6 +61,12 @@ public class Employee implements Serializable {
 	public void setEmployeeType(GenericType employeeType) {
 		this.employeeType = employeeType;
 	}
+	public GenericType getEmployeePosition() {
+		return employeePosition;
+	}
+	public void setEmployeePosition(GenericType employeePosition) {
+		this.employeePosition = employeePosition;
+	}
 	public String getDrivingLicenceNumber() {
 		return drivingLicenceNumber;
 	}
@@ -95,6 +103,12 @@ public class Employee implements Serializable {
 	}
 	public void setDailyCost(Double dailyCost) {
 		this.dailyCost = dailyCost;
+	}
+	public GenericType getCompany() {
+		return company;
+	}
+	public void setCompany(GenericType company) {
+		this.company = company;
 	}
 	
 	
