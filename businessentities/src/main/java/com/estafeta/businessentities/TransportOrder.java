@@ -10,7 +10,7 @@ public class TransportOrder implements Serializable {
 	private GenericType orderType;
 	private Location sourceLocation;
 	private Location destinationLocation;
-	private Date orderDate;
+	private LocatedDate orderDate;
 	private Integer packageItemCount;
 	private Currency monetaryAmount;
 	private List<Shipment> shipments;
@@ -44,10 +44,10 @@ public class TransportOrder implements Serializable {
 	public void setDestinationLocation(Location destinationLocation) {
 		this.destinationLocation = destinationLocation;
 	}
-	public Date getOrderDate() {
+	public LocatedDate getOrderDate() {
 		return orderDate;
 	}
-	public void setOrderDate(Date orderDate) {
+	public void setOrderDate(LocatedDate orderDate) {
 		this.orderDate = orderDate;
 	}
 	public Integer getPackageItemCount() {

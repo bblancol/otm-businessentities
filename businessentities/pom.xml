@@ -5,4 +5,11 @@
   <version>0.0.2</version>
   <name>Entidades de Negocio</name>
   <description>Entidades de Negocio Estafeta</description>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.fasterxml.jackson.core</groupId>
+  		<artifactId>jackson-annotations</artifactId>
+  		<version>2.6.3.redhat-2</version> 
+  	</dependency>
+  </dependencies>
 </project>

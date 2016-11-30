@@ -13,7 +13,7 @@ public class Employee implements Serializable {
 	private GenericType employeeType;
 	private GenericType employeePosition;
 	private String drivingLicenceNumber;
-	private Date drivingLicenceDueDate;
+	private LocatedDate drivingLicenceDueDate;
 	private State drivingLicenceIssueState;
 	private Location defaultWorkLocation;
 	private Status status;
@@ -73,10 +73,10 @@ public class Employee implements Serializable {
 	public void setDrivingLicenceNumber(String drivingLicenceNumber) {
 		this.drivingLicenceNumber = drivingLicenceNumber;
 	}
-	public Date getDrivingLicenceDueDate() {
+	public LocatedDate getDrivingLicenceDueDate() {
 		return drivingLicenceDueDate;
 	}
-	public void setDrivingLicenceDueDate(Date drivingLicenceDueDate) {
+	public void setDrivingLicenceDueDate(LocatedDate drivingLicenceDueDate) {
 		this.drivingLicenceDueDate = drivingLicenceDueDate;
 	}
 	public State getDrivingLicenceIssueState() {

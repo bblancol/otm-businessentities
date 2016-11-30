@@ -19,10 +19,8 @@ public class Shipment implements Serializable {
 	private Double grossVolumeInM3;
 	private Double netWeigthInKg;
 	private Double netVolumeInM3;
-	private Date startDate;
-	private Date endDate;
-	private String startLocationTimeZone;
-	private String endLocationTimeZone;
+	private LocatedDate startDate;
+	private LocatedDate endDate; 
 	private Employee employee;
 	private TransportUnit transporUnit;
 	private Double salePrice;
@@ -113,29 +111,17 @@ public class Shipment implements Serializable {
 	public void setNetVolumeInM3(Double netVolumeInM3) {
 		this.netVolumeInM3 = netVolumeInM3;
 	}
-	public Date getStartDate() {
+	public LocatedDate getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(Date startDate) {
+	public void setStartDate(LocatedDate startDate) {
 		this.startDate = startDate;
 	}
-	public Date getEndDate() {
+	public LocatedDate getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(Date endDate) {
+	public void setEndDate(LocatedDate endDate) {
 		this.endDate = endDate;
-	}
-	public String getStartLocationTimeZone() {
-		return startLocationTimeZone;
-	}
-	public void setStartLocationTimeZone(String startLocationTimeZone) {
-		this.startLocationTimeZone = startLocationTimeZone;
-	}
-	public String getEndLocationTimeZone() {
-		return endLocationTimeZone;
-	}
-	public void setEndLocationTimeZone(String endLocationTimeZone) {
-		this.endLocationTimeZone = endLocationTimeZone;
 	}
 	public Employee getEmployee() {
 		return employee;

@@ -1,9 +1,21 @@
 package com.estafeta.businessentities;
 
-import java.io.Serializable;
+import java.io.Serializable; 
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.annotation.JsonSetter;
+ 
+@JsonRootName(value="Location")
+@JsonAutoDetect
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Location implements Serializable {
+	@JsonProperty("id")	
 	private Integer id;
+	@JsonProperty("code")
 	private String code;
 	private String name;
 	private String address;
@@ -22,13 +34,15 @@ public class Location implements Serializable {
 	private String postalCode;
 	private Double latitude;
 	private Double longitude;
+	
 	public Integer getId() {
 		return id;
 	}
-	
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getCode() {
 		return code;
 	}
