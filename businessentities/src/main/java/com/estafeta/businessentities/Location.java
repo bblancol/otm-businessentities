@@ -2,22 +2,27 @@ package com.estafeta.businessentities;
 
 import java.io.Serializable; 
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonAutoDetect; 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
-import com.fasterxml.jackson.annotation.JsonSetter;
+
+import javax.ws.rs.Path; 
+import javax.ws.rs.PathParam;
+
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
  
 @JsonRootName(value="Location")
 @JsonAutoDetect
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Location implements Serializable {
-	@JsonProperty("id")	
+	@PathParam("id")	
 	private Integer id;
-	@JsonProperty("code")
+	@PathParam("code")
 	private String code;
+	@PathParam("name")
 	private String name;
+	@PathParam("address")
 	private String address;
 	private String address2;
 	private String additionalNotes;
@@ -35,29 +40,42 @@ public class Location implements Serializable {
 	private Double latitude;
 	private Double longitude;
 	
+	@Getter
 	public Integer getId() {
 		return id;
 	}
-
+	
+	@Setter
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
+	
+	@Getter
 	public String getCode() {
 		return code;
 	}
+	
+	@Setter
 	public void setCode(String code) {
 		this.code = code;
 	}
+	
+	@Getter
 	public String getName() {
 		return name;
 	}
+	
+	@Setter
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	@Getter
 	public String getAddress() {
 		return address;
 	}
+	
+	@Setter
 	public void setAddress(String address) {
 		this.address = address;
 	}

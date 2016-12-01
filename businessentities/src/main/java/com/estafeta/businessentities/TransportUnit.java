@@ -20,7 +20,7 @@ public class TransportUnit implements Serializable{
 	private String companyOwner;
 	private TransportUnitType transportUnitType;
 	private TransportUnitSubType transportUnitSubType;
-	private TransportUnit linkedTransportUnit;
+	private LinkedTransportUnit linkedTransportUnit;
 	
 	private Status status;
 	public String getCode() {
@@ -131,10 +131,10 @@ public class TransportUnit implements Serializable{
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-	public TransportUnit getLinkedTransportUnit() {
+	public LinkedTransportUnit getLinkedTransportUnit() {
 		return linkedTransportUnit;
 	}
-	public void setLinkedTransportUnit(TransportUnit linkedTransportUnit) {
+	public void setLinkedTransportUnit(LinkedTransportUnit linkedTransportUnit) {
 		this.linkedTransportUnit = linkedTransportUnit;
 	}
 	
